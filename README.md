@@ -1,4 +1,3 @@
-# llmstudy
 
 第二章
 simpletokenizer.py 
