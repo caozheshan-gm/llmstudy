@@ -9,12 +9,14 @@ all_words = sorted(set(preprocessed))
 all_words.extend(["<|endoftext|>", "<|unk|>"])
 vocab_size = len(all_words)
 
+
 vocab = {token:integer for integer,token in enumerate(all_words)}
 
+print(vocab)
 
 
 tokenizer = SimpleTokenizerV1(vocab)
-text = "hello"
+text = "hello who is your father,my friend"
 ids = tokenizer.encode(text)
 print(ids)
 print(tokenizer.decode(ids))

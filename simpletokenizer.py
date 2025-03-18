@@ -8,6 +8,8 @@ class SimpleTokenizerV1:
 	def encode(self, text):                                                       #C
 		preprocessed = re.split(r'([,.?_!"()\']|--|\s)', text)
 		preprocessed = [item.strip() for item in preprocessed if item.strip()]
+		
+		#没出现在词汇表vocab里的词用"<|unk|>"代替
 		preprocessed = [item if item in self.str_to_int else "<|unk|>" for item in preprocessed]
 		ids = [self.str_to_int[s] for s in preprocessed]
 		return ids
