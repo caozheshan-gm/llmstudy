@@ -22,12 +22,12 @@ def create_dataloader_v1(txt, batch_size=4, max_length=256,stride=128, shuffle=F
 #D 用于预处理的CPU进程数量
 
 
-with open("the-verdict.txt", "r", encoding="utf-8") as f:
-		raw_text = f.read()
+# with open("the-verdict.txt", "r", encoding="utf-8") as f:
+# 		raw_text = f.read()
 
-dataloader = create_dataloader_v1(raw_text, batch_size=4, max_length=4, stride=4)
+# dataloader = create_dataloader_v1(raw_text, batch_size=4, max_length=4, stride=2)
 
-data_iter = iter(dataloader)
-inputs, targets = next(data_iter)
-print("Inputs:\n", inputs)
-print("\nTargets:\n", targets)
+# data_iter = iter(dataloader)
+# inputs, targets = next(data_iter)
+# print("Inputs:\n", inputs)
+# print("\nTargets:\n", targets)
